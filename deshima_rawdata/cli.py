@@ -14,6 +14,7 @@ from . import __version__
 
 # constants
 CHUNK_SIZE = 1024
+DEFAULT_VERSION = f"v{__version__}"
 GITHUB_URL = "https://raw.githubusercontent.com/deshima-dev/rawdata"
 
 
@@ -23,6 +24,7 @@ def download(
     *,
     dir: Path = Path(),
     progress: bool = True,
+    version: str = DEFAULT_VERSION,
 ) -> Path:
     """Download DESHIMA raw data for given observation ID.
 
@@ -30,19 +32,20 @@ def download(
         obsid: Observation ID (YYYYmmddHHMMSS).
         dir: Directory where the raw data is saved.
         progress: Whether to show a progress bar.
+        version: Version of the raw data.
 
     Returns:
         Path of the downloaded raw data.
 
     """
-    url = f"{GITHUB_URL}/v{__version__}/data/{obsid}.tar.gz"
+    url = f"{GITHUB_URL}/{version}/data/{obsid}.tar.gz"
 
     if not (response := get(url, stream=True)).ok:
         response.raise_for_status()
 
     bar_options = {
         "disable": not progress,
-        "total": int(response.headers.get("content-length", 0)),
+        "total": int(response.headers["content-length"]),
         "unit": "B",
         "unit_scale": True,
     }
