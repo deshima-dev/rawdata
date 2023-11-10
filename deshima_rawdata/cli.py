@@ -2,6 +2,7 @@ __all__ = ["download"]
 
 
 # standard library
+import tarfile
 from pathlib import Path
 
 
@@ -14,8 +15,8 @@ from . import __version__
 
 # constants
 CHUNK_SIZE = 1024
-GITHUB_URL = "https://raw.githubusercontent.com/deshima-dev/rawdata"
 DEFAULT_TAG = f"v{__version__}"
+GITHUB_URL = "https://raw.githubusercontent.com/deshima-dev/rawdata"
 
 
 def download(
@@ -23,7 +24,8 @@ def download(
     /,
     *,
     dir: Path = Path(),
-    progress: bool = True,
+    extract: bool = False,
+    progress: bool = False,
     tag: str = DEFAULT_TAG,
 ) -> Path:
     """Download DESHIMA raw data for given observation ID.
@@ -31,6 +33,7 @@ def download(
     Args:
         obsid: Observation ID (YYYYmmddHHMMSS).
         dir: Directory where the raw data is saved.
+        extract: Whether to extract the raw data.
         progress: Whether to show a progress bar.
         tag: Git tag (or branch) of the raw data.
 
@@ -56,7 +59,15 @@ def download(
             bar.update(len(data))
             f.write(data)
 
-    return data_path
+    if not extract:
+        return data_path
+
+    with tarfile.open(data_path, "r:gz") as tar:
+        tar.extractall(data_path.parent)
+        dir_name = tar.getnames()[0]
+
+    data_path.unlink(True)
+    return data_path.parent / dir_name
 
 
 def main() -> None:
