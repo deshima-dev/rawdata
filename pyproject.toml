@@ -18,6 +18,10 @@ ipython = "^8.17"
 pyright = "^1.1"
 pytest = "^7.4"
 
+
+[tool.poetry.scripts]
+deshima-rawdata = "deshima_rawdata.cli:main"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
