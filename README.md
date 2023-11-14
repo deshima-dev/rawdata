@@ -7,11 +7,15 @@
 
 DESHIMA raw data and downloader package
 
-# Usage
+## Use of the data
+
+Please contact [@astropenguin](https://github.com/astropenguin) before using the data.
+
+## Download the data
 
 ```
 $ pip install deshima-rawdata
-$ deshima-rawdata download <obsid>
+$ deshima-rawdata download <observation ID>
 ```
 
 See the command help for more information.
@@ -20,9 +24,9 @@ See the command help for more information.
 $ deshima-rawdata download --help
 ```
 
-# List of raw data
+## List of the data
 
-| Observation ID | File name | Source | Observation type |
+| Observation ID | File name | Source name | Observation type |
 | --- | --- | --- | --- |
 | 20231108052231 | 20231108052231.tar.gz | Jupiter | raster |
 | 20231109015146 | 20231109015146.tar.gz | Jupiter | zscan |
