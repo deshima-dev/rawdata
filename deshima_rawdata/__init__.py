@@ -1,5 +1,5 @@
 __all__ = ["cli", "download", "list"]
-__version__ = "2023.11.1"
+__version__ = "2023.11.2"
 
 
 # submodules
