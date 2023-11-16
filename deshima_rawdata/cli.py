@@ -4,6 +4,7 @@ __all__ = ["download", "list"]
 # standard library
 import tarfile
 from pathlib import Path
+from typing import Any, Literal, overload
 
 
 # dependencies
@@ -79,14 +80,24 @@ def download(
     return data_path.with_name(dir_name)
 
 
-def list(format: str = DEFAULT_LIST_FORMAT) -> str:
+@overload
+def list(format: Literal["csv", "json", "markdown"]) -> str:
+    ...
+
+
+@overload
+def list(format: Literal["dict"]) -> dict[str, str]:
+    ...
+
+
+def list(format: str = DEFAULT_LIST_FORMAT) -> Any:
     """List DESHIMA raw datasets available in the package.
 
     Args:
         format: Format of the list that can be output by pandas.
 
     Returns:
-        String of the list with given format.
+        The list of DESHIMA raw datasets with given format.
 
     """
     return getattr(DATA_LIST, f"to_{format}")()
