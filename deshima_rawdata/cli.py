@@ -23,7 +23,7 @@ DATA_LIST = pd.read_csv(
     dtype={0: str},
 )
 DATA_REPO_URL = "https://github.com/deshima-dev/rawdata"
-DEFAULT_DATA_TAG = f"v{__version__}"
+DEFAULT_DATA_REF = f"v{__version__}"
 DEFAULT_LIST_FORMAT = "markdown"
 
 
@@ -34,7 +34,7 @@ def download(
     dir: Path = Path(),
     extract: bool = False,
     progress: bool = False,
-    tag: str = DEFAULT_DATA_TAG,
+    ref: str = DEFAULT_DATA_REF,
 ) -> Path:
     """Download DESHIMA raw data for given observation ID.
 
@@ -43,15 +43,15 @@ def download(
         dir: Directory where the raw data is saved.
         extract: Whether to extract the raw data.
         progress: Whether to show a progress bar.
-        tag: Git tag (or branch) of the raw data.
-            Note this is for development use only.
+        ref: Reference of the branch or tag for the raw data.
+            Note that this is for development use only.
 
     Returns:
         Path of the downloaded raw data.
 
     """
     file_name = DATA_LIST["File name"][str(obsid)]  # type: ignore
-    url = f"{DATA_REPO_URL}/raw/{tag}/data/{file_name}"
+    url = f"{DATA_REPO_URL}/raw/{ref}/data/{file_name}"
 
     if not (response := get(url, stream=True)).ok:
         response.raise_for_status()
