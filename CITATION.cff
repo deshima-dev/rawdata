@@ -6,6 +6,7 @@ abstract: "DESHIMA raw data and downloader package"
 version: 2023.11.3
 date-released: 2023-11-16
 license: "MIT"
+doi: "10.5281/zenodo.10145185"
 url: "https://github.com/deshima-dev/rawdata"
 authors:
   - given-names: "Akio"

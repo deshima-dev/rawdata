@@ -3,6 +3,7 @@
 [![Release](https://img.shields.io/pypi/v/deshima-rawdata?label=Release&color=cornflowerblue&style=flat-square)](https://pypi.org/project/deshima-rawdata/)
 [![Python](https://img.shields.io/pypi/pyversions/deshima-rawdata?label=Python&color=cornflowerblue&style=flat-square)](https://pypi.org/project/deshima-rawdata/)
 [![Downloads](https://img.shields.io/pypi/dm/deshima-rawdata?label=Downloads&color=cornflowerblue&style=flat-square)](https://pepy.tech/project/deshima-rawdata)
+[![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.10145185-cornflowerblue?style=flat-square)](https://doi.org/10.5281/zenodo.10145185)
 [![Tests](https://img.shields.io/github/actions/workflow/status/deshima-dev/rawdata/tests.yaml?label=Tests&style=flat-square)](https://github.com/deshima-dev/rawdata/actions)
 
 DESHIMA raw data and downloader package
