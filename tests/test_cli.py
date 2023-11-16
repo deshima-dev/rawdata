@@ -1,18 +1,15 @@
 # standard library
-from pkgutil import get_data
+from os import environ as env
 
 
 # dependencies
 from deshima_rawdata import cli
 
 
-# constants
-DATA_LIST = get_data("deshima_rawdata", "data.csv")
-
-
-def test_download() -> None:
-    pass
+def test_cli_download() -> None:
+    for obsid in cli.DATA_LIST.index:
+        cli.download(obsid, tag=env["GITHUB_SHA"])
 
 
 def test_cli_list() -> None:
-    assert cli.list("csv") == DATA_LIST.decode()
+    assert cli.list("csv") == cli.DATA_LIST.to_csv()
