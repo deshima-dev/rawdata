@@ -43,6 +43,7 @@ def download(
         extract: Whether to extract the raw data.
         progress: Whether to show a progress bar.
         tag: Git tag (or branch) of the raw data.
+            Note this is for development use only.
 
     Returns:
         Path of the downloaded raw data.
