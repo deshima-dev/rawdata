@@ -25,6 +25,9 @@ pytest = "^7.4"
 [tool.poetry.scripts]
 deshima-rawdata = "deshima_rawdata.cli:main"
 
+[tool.pyright]
+typeCheckingMode = "basic"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

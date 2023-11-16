@@ -49,7 +49,7 @@ def download(
         Path of the downloaded raw data.
 
     """
-    file_name = Path(DATA_LIST["File name"][str(obsid)])
+    file_name = DATA_LIST["File name"][str(obsid)]  # type: ignore
     url = f"{DATA_REPO_URL}/raw/{tag}/data/{file_name}"
 
     if not (response := get(url, stream=True)).ok:
