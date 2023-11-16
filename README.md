@@ -32,6 +32,7 @@ $ deshima-rawdata list
 
 |   Observation ID | File name                    | Source name   | Observation type   |
 |-----------------:|:-----------------------------|:--------------|:-------------------|
+|   20171103184436 | cosmos_20171103184436.tar.gz | Saturn        | zscan              |
 |   20231108052231 | cosmos_20231108052231.tar.gz | Jupiter       | raster             |
 |   20231109015146 | cosmos_20231109015146.tar.gz | Jupiter       | zscan              |
 |   20231109060113 | cosmos_20231109060113.tar.gz | Blank sky     | skydip             |
