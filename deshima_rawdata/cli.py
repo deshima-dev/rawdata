@@ -1,4 +1,4 @@
-__all__ = ["download", "list"]
+__all__ = ["download", "list", "version"]
 
 
 # standard library
@@ -10,6 +10,7 @@ from typing import Any, Literal, overload
 # dependencies
 import pandas as pd
 from fire import Fire
+from packaging.version import Version
 from requests import get
 from tqdm import tqdm
 from . import __version__
@@ -103,6 +104,17 @@ def list(format: str = DEFAULT_LIST_FORMAT) -> Any:
     return getattr(DATA_LIST, f"to_{format}")()
 
 
+def version() -> Version:
+    """Show the version of the package."""
+    return Version(__version__)
+
+
 def main() -> None:
     """Entry point of the deshima-rawdata command."""
-    Fire({"download": download, "list": list})
+    Fire(
+        {
+            "download": download,
+            "list": list,
+            "version": version,
+        }
+    )

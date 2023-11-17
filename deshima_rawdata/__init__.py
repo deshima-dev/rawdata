@@ -1,4 +1,4 @@
-__all__ = ["cli", "download", "list"]
+__all__ = ["cli", "download", "list", "version"]
 __version__ = "2023.11.4"
 
 
