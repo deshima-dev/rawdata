@@ -9,6 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = ">=3.9, <3.13"
 fire = "^0.5"
+packaging = "^23.0"
 requests = "^2.30"
 tqdm = "^4.65"
 
