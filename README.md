@@ -1,4 +1,4 @@
-# rawdata
+# deshima-rawdata
 
 [![Release](https://img.shields.io/pypi/v/deshima-rawdata?label=Release&color=cornflowerblue&style=flat-square)](https://pypi.org/project/deshima-rawdata/)
 [![Python](https://img.shields.io/pypi/pyversions/deshima-rawdata?label=Python&color=cornflowerblue&style=flat-square)](https://pypi.org/project/deshima-rawdata/)
