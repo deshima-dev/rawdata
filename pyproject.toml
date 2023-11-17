@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "deshima-rawdata"
-version = "2023.11.4"
+version = "2023.11.5"
 description = "DESHIMA raw data and downloader package"
 authors = ["Akio Taniguchi <taniguchi@a.phys.nagoya-u.ac.jp>"]
 license = "MIT"
@@ -9,6 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = ">=3.9, <3.13"
 fire = "^0.5"
+packaging = "^23.0"
 requests = "^2.30"
 tqdm = "^4.65"
 
