@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "deshima-rawdata"
-version = "2023.11.5"
+version = "2024.4.0"
 description = "DESHIMA raw data and downloader package"
 authors = ["Akio Taniguchi <taniguchi@a.phys.nagoya-u.ac.jp>"]
 license = "MIT"

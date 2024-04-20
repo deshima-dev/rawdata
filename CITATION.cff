@@ -3,7 +3,7 @@ message: "If you use this software, please cite it as below."
 
 title: "deshima-rawdata"
 abstract: "DESHIMA raw data and downloader package"
-version: 2023.11.5
+version: 2024.4.0
 date-released: 2023-11-17
 license: "MIT"
 doi: "10.5281/zenodo.10145185"
