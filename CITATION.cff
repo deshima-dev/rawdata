@@ -1,15 +1,24 @@
-cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
 
-title: "deshima-rawdata"
-abstract: "DESHIMA raw data and downloader package"
-version: 2024.4.0
-date-released: 2023-11-17
-license: "MIT"
-doi: "10.5281/zenodo.10145185"
-url: "https://github.com/deshima-dev/rawdata"
+cff-version: 1.2.0
+title: deshima-rawdata
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
 authors:
-  - given-names: "Akio"
-    family-names: "Taniguchi"
-    affiliation: "Nagoya University"
-    orcid: "https://orcid.org/0000-0002-9695-6183"
+  - given-names: Akio
+    family-names: Taniguchi
+    email: taniguchi@a.phys.nagoya-u.ac.jp
+    affiliation: Nagoya University
+    orcid: 'https://orcid.org/0000-0002-9695-6183'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.10145185
+repository-code: 'https://github.com/deshima-dev/rawdata/'
+url: 'https://pypi.org/project/deshima-rawdata/'
+abstract: DESHIMA raw data and downloader package
+license: MIT
+version: 2024.4.0
+date-released: '2024-04-20'
