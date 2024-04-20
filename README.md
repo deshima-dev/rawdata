@@ -37,3 +37,4 @@ $ deshima-rawdata list
 |   20231108052231 | cosmos_20231108052231.tar.gz | Jupiter       | raster             |
 |   20231109015146 | cosmos_20231109015146.tar.gz | Jupiter       | zscan              |
 |   20231109060113 | cosmos_20231109060113.tar.gz | Blank sky     | skydip             |
+|   20231117042946 | cosmos_20231117042946.tar.gz | Jupiter       | pswsc              |
